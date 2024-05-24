@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <img src="img/logo_vorterix.png" alt="logo de vorterix">
+                <h2 class="nombre_vorterix">vorterix</h2>
+            </a>
+            <label for="menu_hamburguesa" class="label_hamburguesa">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="list_icon" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                  </svg>
+            </label>
+
+            <input class="menu_hamburguesa" type="checkbox" id="menu_hamburguesa">
+            
+            <ul class="ul_links">
+                <li class="li_links"><a href="" class="link">Inicio</a></li>
+                <li class="li_links"><a href="" class="link">Programación</a></li>
+                <li class="li_links"><a href="" class="link">On demand</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="contenedor_1_3">
+        <div class="tarjeta_5">
+            <div class="img_1">
+                <img src="img/img_agradecimiento.png" alt="">
+            </div>
+            <div>
+                <h1 class="Titulo"></b>¡Gracias <linea_letra class="linea_letra">por <br> elegirnos,</linea_letra><br> <span id="nombre-placeholder">NOMBRE</span>!</b></h1>
+                <p>Te enviaremos más información a <br><b><span id="email-placeholder">EMAIL</span></b><br>para mantenerte al tanto</p>
+                <a href="index.html"><button class="btn">Volver al inicio</button></a>
+            </div>
+            <div class="img_2">
+                <img src="img/img_agradecimiento.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="contenedor_2_2">
+
+    </div>
+    
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+
+            var email = localStorage.getItem('email');
+
+            var nombre = localStorage.getItem('nombre');
+
+            document.getElementById('email-placeholder').innerText = email;
+            document.getElementById('nombre-placeholder').innerText = nombre;
+        });
+    </script>
+
+</body>
+</html>

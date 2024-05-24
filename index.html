@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <img src="img/logo_vorterix.png" alt="logo de vorterix">
+                <h2 class="nombre_vorterix">vorterix</h2>
+            </a>
+            <label for="menu_hamburguesa" class="label_hamburguesa">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="list_icon" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                  </svg>
+            </label>
+
+            <input class="menu_hamburguesa" type="checkbox" id="menu_hamburguesa">
+            
+            <ul class="ul_links">
+                <li class="li_links"><a href="" class="link">Inicio</a></li>
+                <li class="li_links"><a href="" class="link">Programación</a></li>
+                <li class="li_links"><a href="" class="link">On demand</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="contenedor">
+        <div>
+            <form  action="formulario.html" id="emailForm">
+                <h1 class="Titulo"></b>Unite <linea_letra class="linea_letra">a tu</linea_letra><br>programa<br>favorito</b></h1>
+                <p>Formá parte virtual o presencialmente. <br>Queremos tenerte como parte de nuestro equipo. <br>Ingresá tu correo para poder estar en contacto  <br>y notificarte cualquier novedad.</p>
+                <div class="email">
+                    <input type="email" name="email" id="email" placeholder="ejemplo@gmail.com" required>
+                <a href="formulario.html"></a>
+                </div>
+            <input type="submit" class="btn" id="submit" placeholder="Participar"></input>
+            </form>
+        </div>
+        <div class="img_portadas">
+            <img src="img/img_portadas.png" alt="">
+        </div>
+    </div>
+    <div class="contenedor_2">
+        <div class="forma_parte">
+            <h1 class="Titulo"></b>Formá <br>Parte <br><linea_letra class="linea_letra">en vivo </linea_letra></b></h1>
+            <img src="img/foto paren la mano.png" alt="foto paren la mano">
+        </div>
+    </div>
+    <div class="contenedor_3">
+        <img class="flecha_izq_fondo_violeta" src="img/Flecha Izq.png" alt="">
+        <div class="tarjeta">
+            <h1>Participa en</h1>
+            <img src="img/fondo_violeta_SLV.jpg" alt="">
+            <h1>#SubanLosVidrios</h1>
+            <p>Un programa menos duro que el <br> cemento y más transparente <br> que el acrílico.</p>
+            <p><b>lunes a viernes <br> 17 a 19 hs</b></p>
+        </div>
+        <div class="tarjeta_1">
+            <h1>Participa en</h1>
+            <img src="img/fondo_violeta_PLM.jpg" alt="">
+            <h1>#ParenLaMano</h1>
+            <p>El exitoso streamer y humorista <br> llega a Vorterix con su desopilante y <br> divertido punto de vista.</p>
+            <p><b>lunes a viernes <br> 19 a 21 hs</b></p>
+        </div>
+        <img class="flecha_der_fondo_violeta" src="img/Flecha der.png" alt="">
+    </div>
+    <div class="contenedor_2">
+        <div class="tarjeta_vorterix">
+            <h1>Vorterix</h1>
+            <p><b> Nos interesa conocerte, entender tu punto de <br> vista sobre nosotros y entregarte la mejor <br> experiencia posible.</b></p>
+            <div class="email">
+                <a href="index.html"><button class="btn">Ver más</button></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            <h3>Nos podes encontrar en</h3>
+        </div>
+        <div>
+            <img src="img/logo_ig.png" alt="">
+            <img src="img/logo_youtube.png" alt="">
+            <img src="img/logo_tiktok.png" alt="">
+            <img src="img/logo_twitch.png" alt="">
+        </div>
+    </div>
+    
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            var emailForm = document.getElementById('emailForm');
+
+            emailForm.addEventListener('submit', function(event) {
+                var input_email = document.getElementById('email');
+                var valor_email = input_email.value.trim();
+
+                if (valor_email === "") {
+                    event.preventDefault();
+                    alert("Por favor, complete su correo electrónico.");
+                } else {
+                    localStorage.setItem('email', valor_email);
+                }
+            });
+        });
+    </script>  
+</body>
+</html>

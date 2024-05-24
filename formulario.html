@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <img src="img/logo_vorterix.png" alt="logo de vorterix">
+                <h2 class="nombre_vorterix">vorterix</h2>
+            </a>
+            <label for="menu_hamburguesa" class="label_hamburguesa">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="list_icon" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                  </svg>
+            </label>
+
+            <input class="menu_hamburguesa" type="checkbox" id="menu_hamburguesa">
+            
+            <ul class="ul_links">
+                <li class="li_links"><a href="" class="link">Inicio</a></li>
+                <li class="li_links"><a href="" class="link">Programación</a></li>
+                <li class="li_links"><a href="" class="link">On demand</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="contenedor_1_2">
+        <div class="izquierda">
+            <div class="tarjeta_2">
+                <h1 class="Titulo"></b>Seleccioná <linea_letra class="linea_letra"><br>tu programa</linea_letra><br>favorito</b></h1>
+            </div>
+        </div>
+        <div class="derecha">
+            <div class="tarjeta_3">
+                <p><b>Marcá el programa en el que te gustaría participar</b></p>
+                <div class="checkbox">
+                    <ul>
+                        <div class="botones-arriba">
+                            <li><input type="checkbox" name="check1" id="check1"><label for="check1">Suban Los Vidrios</label></li>
+                            <li><input type="checkbox" name="check2" id="check2"><label for="check2">Paren La Mano</label></li>
+                            <li><input type="checkbox" name="check3" id="check3"><label for="check3">Cohete Al Sol</label></li>
+                        </div>
+                        <div class="botones-abajo">
+                            <li><input type="checkbox" name="check4" id="check4"><label for="check4">Maldición, va a ser un día hermoso</label></li>
+                            <li><input type="checkbox" name="check5" id="check5"><label for="check5">Malditos Nerds</label></li>
+                        </div>
+                        <div class="carrusel">
+                            <li><input type="checkbox" name="check6" id="check6"><label for="check6">Suban Los Vidrios</label></li>
+                            <li><input type="checkbox" name="check7" id="check7"><label for="check7">Paren La Mano</label></li>
+                            <li><input type="checkbox" name="check8" id="check8"><label for="check8">Cohete Al Sol</label></li>
+                            <li><input type="checkbox" name="check9" id="check9"><label for="check9">Maldición</label></li>
+                            <li><input type="checkbox" name="check10" id="check10"><label for="check10">Malditos Nerds</label></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="tarjeta_4">
+                <form action="fin-formulario.html" id="nameForm">
+                    <p><b>Completá estos últimos datos</b></p>
+                    <div class="inputs-container">
+                        <div class="nombre">
+                            <input type="text" name="nombre" id="nombre" placeholder="Nombre..." required="true"> 
+                        </div>
+                        <div class="cumpleaños">
+                            <input type="text" name="cumpleaños" id="cumpleaños" placeholder="Fecha de cumpleaños..." required="true"> 
+                        </div>
+                    </div>
+                    <div>
+                        <p><br>¿De qué forma te gustaría participar?</p>
+                    </div>
+                    <div  class="chk_box_container">
+                        <div class="chk_box">
+                            <input class="" type="checkbox" id="presencial">
+                            <label for="presencial">Presencial</label>
+                        </div>
+                        <div class="chk_box_container">
+                            <div class="chk_box">
+                                <input class="" type="checkbox" id="virtual">
+                                <label for="virtual">Virtual</label>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" class="btn" id="submit" placeholder="Participar"></input>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor_2_3">
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+        var nameForm = document.getElementById('nameForm');
+
+        nameForm.addEventListener('submit', function(event) {
+            var input_nombre = document.getElementById('nombre');
+            var valor_nombre = input_nombre.value.trim();
+
+            if (valor_nombre === "") {
+                event.preventDefault();
+                alert("Por favor, complete su nombre.");
+            } else {
+                localStorage.setItem('nombre', valor_nombre);
+            }
+            });
+        });
+    </script>
+    
+</body>
+</html>
