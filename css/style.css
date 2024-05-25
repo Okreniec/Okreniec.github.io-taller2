@@ -556,12 +556,12 @@ input:not(:placeholder-shown)~label {
     }
 
     .contenedor .Titulo, .contenedor_1_3 .Titulo {
-        padding: 0px 2%;
+        padding: 0px 4%;
         font-size: 48px;
     }
 
     .contenedor p, .contenedor_1_3 p {
-        padding: 14px 2%;
+        padding: 14px 4%;
         font-size: 14px;
     }
 
@@ -674,11 +674,11 @@ input:not(:placeholder-shown)~label {
     }
 
     .btn {
-        width: 400px;
+        width: 385px;
     }
     
     .email input {
-        width: 400px;
+        width: 385px;
     }
 
     .flecha_izq_fondo_violeta, .flecha_der_fondo_violeta {
