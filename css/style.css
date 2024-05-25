@@ -34,7 +34,9 @@ ul {
     flex-wrap: wrap;
     position: relative;
     padding: 0 var(--padding_left_right);
+    z-index: 9999;
 }
+
 
 .menu_hamburguesa {
     display: none;
@@ -163,7 +165,6 @@ input:not(:placeholder-shown)~label {
 .btn {
     background-color: var(--color_acento);
     height: 50px;
-    width: 412px;
     margin-top: 14px;
     border: 0;
     cursor: pointer;
@@ -538,6 +539,14 @@ input:not(:placeholder-shown)~label {
         display: flex;
         justify-content: space-between;
     }
+
+    .btn {
+        width: 412px;
+    }
+
+    .email input {
+        width: 412px;
+    }
 }
 
 
@@ -662,5 +671,21 @@ input:not(:placeholder-shown)~label {
     
     .tarjeta_5 {
         justify-content: center;
+    }
+
+    .btn {
+        width: 400px;
+    }
+    
+    .email input {
+        width: 400px;
+    }
+
+    .flecha_izq_fondo_violeta, .flecha_der_fondo_violeta {
+        display: none;
+    }
+
+    .img_plm {
+        width: 150%;
     }
 }
