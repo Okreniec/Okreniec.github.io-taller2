@@ -696,4 +696,8 @@ input:not(:placeholder-shown)~label {
     .img_plm {
         display: none;
     }
+
+    .img_fin_formulario {
+        height: 270px;
+    }
 }
