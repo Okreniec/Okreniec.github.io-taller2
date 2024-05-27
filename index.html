@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vorterix</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -57,6 +60,7 @@
         <div class="tarjeta">
             <h1>Participa en</h1>
             <img class="img_plm" src="img/fondo_violeta_SLV.jpg" alt="">
+            <img class="img_plm_cel" src="img/fondo_violeta_SLV_celular.jpg" alt="">
             <h1>#SubanLosVidrios</h1>
             <p>Un programa menos duro que el <br> cemento y más transparente <br> que el acrílico.</p>
             <p><b>lunes a viernes <br> 17 a 19 hs</b></p>
@@ -93,21 +97,22 @@
     </div>
     
     <script>
-        window.addEventListener('DOMContentLoaded', function() {
-            var emailForm = document.getElementById('emailForm');
+    window.addEventListener('DOMContentLoaded', function() {
+        var emailForm = document.getElementById('emailForm');
 
-            emailForm.addEventListener('submit', function(event) {
-                var input_email = document.getElementById('email');
-                var valor_email = input_email.value.trim();
+        emailForm.addEventListener('submit', function(event) {
+            var input_email = document.getElementById('email');
+            var valor_email = input_email.value.trim();
 
-                if (valor_email === "") {
-                    event.preventDefault();
-                    alert("Por favor, complete su correo electrónico.");
-                } else {
-                    localStorage.setItem('email', valor_email);
-                }
-            });
+            if (valor_email === "") {
+                event.preventDefault();
+                alert("Por favor, complete su correo electrónico.");
+            } else {
+                localStorage.setItem('email', valor_email);
+            }
         });
-    </script>  
+    });
+</script>
+ 
 </body>
 </html>
