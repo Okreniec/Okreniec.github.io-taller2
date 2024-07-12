@@ -1,119 +1,538 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vorterix</title>
-    <link rel="icon" href="img/logo_vorterix.png">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>LevelUp</title>
 </head>
-<body>
-    <header>
-        <nav class="navbar">
-            <a href="#" class="logo">
-                <img src="img/logo_vorterix.png" alt="logo de vorterix">
-                <h2 class="nombre_vorterix">vorterix</h2>
-            </a>
-            <label for="menu_hamburguesa" class="label_hamburguesa">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="list_icon" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-                  </svg>
-            </label>
 
-            <input class="menu_hamburguesa" type="checkbox" id="menu_hamburguesa">
-            
-            <ul class="ul_links">
-                <li class="li_links"><a href="" class="link">Inicio</a></li>
-                <li class="li_links"><a href="" class="link">Programación</a></li>
-                <li class="li_links"><a href="" class="link">On demand</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="contenedor">
+<body>
+    <nav>
+        <a href="">
+            <img src="./imgs/logos/levelUp.png" alt="levelUpLogo">
+        </a>
+        <input class="boton-linea-roja" class="buscador" type="text" placeholder="Busca juegos, etc...">
+        <div class="navLinks">
+            <a href=""> Juegos</a>
+            <a href=""> Noticias</a>
+            <a href=""> Articulos</a>
+        </div>
+        <div class="redes">
+            <a href="">
+                <img src="/imgs/Iconos/faceIcono.png" alt="">
+            </a>
+            <a href="">
+                <img src="/imgs/Iconos/youtubeIcon.png" alt="">
+            </a>
+            <a href="">
+                <img src="/imgs/Iconos/xIcono.png" alt="">
+            </a>
+        </div>
+
+        <div class="profile">
+            <a href="">
+                <img src="./imgs/Iconos/perfil.png" alt="iconoDePerfil">
+            </a>
+        </div>
+    </nav>
+
+    <div class="banner">
         <div>
-            <h1 class="Titulo"></b>Unite <linea_letra class="linea_letra">a tu</linea_letra><br>programa<br>favorito</b></h1>
-            <p>Visita tu programa favorito por un día, virtual o <br> presencialmente. Contanos qué te gustaría ver y<br> cómo, mientras te divertís y nos compartís un poco<br> sobre vos. Déjanos tu correo para mantenernos en<br> contacto.</p>
-            <form  action="formulario.html" id="emailForm">
-                <div class="email">
-                    <input type="email" name="email" id="email" placeholder="ejemplo@gmail.com" required>
-                    <a href="formulario.html"></a>
+            <h1><i>Assassin's Creed Mirage</i></h1>
+            <p class="subtitulo">El último lanzamiento de la saga de la Orden de los Asesinos <br> tiene como locos a
+                los fanáticos</p>
+            <div class="Interacciones">
+                <div class="like">
+                    <img class="icono-banner" src="imgs/Iconos/Violeta/like-linea.png" alt="">
+                    <p>8560 Likes</p>
+                    <img class="icono-banner" src="imgs/Iconos/Violeta/comentario-linea.png" alt="">
+                    <p>240 comentarios</p>
                 </div>
-                <input type="submit" class="btn" id="submit" placeholder="Participar"></input>
-            </form>
-        </div>
-        <div class="img_portadas">
-            <img src="img/img_portadas.png" alt="">
+            </div>
+            <img class="barra" src="imgs/Iconos/Violeta/barra.png" alt="">
         </div>
     </div>
+
+    <dialog class="popup-contenedor" id="modal">
+        <div class="popup">
+            <div class="popup-izq">
+                <h2>El título de tu review</h2>
+                <hr>
+                <p>¿Qué opinás?</p><br><br><br><br>
+                <p><img src="imgs/Iconos/img-linea-blanca.png" alt="">Agregar imágenes (5)</p>
+            </div>
+            <div class="popup-der">
+                <h2>Tu puntaje</h2>
+                <p>Coloca el cursor y haz click para dar tu puntaje</p>
+                <img src="imgs/logos/numeros-reviews.png" alt="">
+            </div>
+        </div>
+        <div class="popup-abajo">
+            <input class="btn-cerrar-modal" id="btn-cerrar-modal" type="button" value="cancelar" />
+            <input class="btn-cerrar-modal-1" id="btn-cerrar-modal-1" type="button" value="publicar" />
+        </div>
+    </dialog>
+
+    <div>
+        <section class="segunda">
+            <div class="contenedor-izquierda">
+                <div class="JuegosSemana">
+                    <div class="Juego">
+                        <div class="Fondo-violeta"><img src="imgs/logos/content-warning.png" alt="">
+                            <img class="icono-review-0" src="imgs/Iconos/Rojo/Guardado-linea.png" alt="">
+                        </div>
+                        <div class="text">
+                            <h2>Content Warning</h2>
+                            <img src="imgs/logos/numeros.png" alt="">
+                            <input class="btn-abrir-modal" id="btn-abrir-modal" type="button" value="¿Lo jugaste?" />
+                        </div>
+                    </div>
+                    <br>
+                    <div class="BulletReview">
+                        <div class="container-2">
+                            <h2>Este juego está buenísimo</h2>
+                            <p>Por:
+                            <p class="color-rojo-txt">Ivano creniek</p>
+                            </p>
+                        </div>
+                        <div>
+                            <p class="texto-content-warning">Content Warning te invita a una aventura de terror con
+                                amigos.
+                                Graba lo paranormal,<br>
+                                explora lo desconocido y prepárate para sustos y risas inesperadas. Es como si<br>
+                                "Cazafantasmas" se juntara con "Pasapalabra", pero con menos baba verde y más sustos<br>
+                                ridículos</p>
+                            <hr>
+                        </div>
+                        <div class="container">
+                            <div class="dur-inm-jug-pun-com-lik">
+                                <a href=""></a><button>Duración: 6</button>
+                                <a href=""></a><button>Inmersión: 8</button>
+                                <a href=""></a><button>Jugabilidad: 7</button>
+                                <div class="dur-inm-jug-pun-com-lik-2">
+                                    <a href=""></a><button>Puntaje: 7</button>
+                                </div>
+                            </div>
+                            <div class="stats">
+                                <p><img class="icono-review" src="imgs/Iconos/Rojo/Comentario-linea.png" alt="">3</p>
+                                <p><img class="icono-review" src="imgs/Iconos/Rojo/Like_linea.png" alt="">87</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="criticos">
+                    <img class="img_criticos" src="imgs/logos/algunos-criticos-populares.png" alt="">
+                    <div class="perfiles">
+                        <div class="perfil-2">
+                            <div class="profileImage"></div>
+                            <h4>
+                                nikini cole
+                            </h4>
+                            <input class="boton-linea-roja-3" type="button" value="Seguir">
+                        </div>
+
+                        <div class="perfil-2">
+                            <div class="profileImage"></div>
+                            <h4>
+                                oli iba
+                            </h4>
+                            <input class="boton-linea-roja-3" type="button" value="Seguir">
+                        </div>
+
+                        <div class="perfil-2">
+                            <div class="profileImage"></div>
+                            <h4>
+                                ivano creniek
+                            </h4>
+                            <input class="boton-linea-roja-3" type="button" value="Seguir">
+                        </div>
+
+                        <div class="perfil-2">
+                            <div class="profileImage"></div>
+                            <h4>
+                                juanc hulis
+                            </h4>
+                            <input class="boton-linea-roja-3" type="button" value="Seguir">
+                        </div>
+
+                        <div class="perfil-2">
+                            <div class="profileImage"></div>
+                            <h4>
+                                a-lan
+                            </h4>
+                            <input class="boton-linea-roja-3" type="button" value="Seguir">
+                        </div>
+
+                        <div class="botonMas">
+                            <button class="verMas">
+                            </button>
+                            <h4>
+                                ver más
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenedor-derecha">
+                <div class="Noticias">
+                    <div class="imageNoticia noticia-0">
+
+                    </div>
+                    <div>
+                        <h2>Los recomendados de la semana</h2>
+                        <p class="subtitle">Nuestra famosa recomendación semanal, un punto medio<br> entre lo más
+                            descargado
+                            y lo mejor reseñado de los últimos días</p>
+                    </div>
+                    <div class="informacion-articulos">
+                        <p class="subtitulo-1"><img class="icono-reloj-hilo" src="imgs/Iconos/reloj-gris-lineas.png"
+                                alt="">
+                            Publicado el 24 de junio</p>
+                        <p class="subtitulo-2b"><img class="icono-review" src="imgs/Iconos/Violeta/like-fill.png"
+                                alt="">151
+                        </p>
+                        <p class="subtitulo-2b"><img class="icono-review" src="imgs/Iconos/Violeta/comentario-fill.png"
+                                alt="">22</p>
+                    </div>
+                </div>
+                <div class="Noticias">
+                    <div class="imageNoticia noticia-1">
+                    </div>
+                    <div>
+                        <h2>Nuevo lanzamientos de Nintendo</h2>
+                        <p class="subtitle">La popular saga Mario y Luigui esta devuelta en Nintendo<br> Swicht con
+                            nuevas
+                            aventuras...</p>
+                    </div>
+                    <div class="informacion-articulos">
+                        <p class="subtitulo-1"><img class="icono-reloj-hilo" src="imgs/Iconos/reloj-gris-lineas.png"
+                                alt="">
+                            Publicado el 24 de junio</p>
+                        <p class="subtitulo-2b"><img class="icono-review" src="imgs/Iconos/Violeta/like-fill.png"
+                                alt="">125
+                        </p>
+                        <p class="subtitulo-2b"><img class="icono-review" src="imgs/Iconos/Violeta/comentario-fill.png"
+                                alt="">21</p>
+                    </div>
+                </div>
+                <div class="Noticias">
+                    <div class="imageNoticia noticia-2">
+                    </div>
+                    <div>
+                        <h2>Palworld regala $100 USD en Steam</h2>
+                        <p class="subtitle">Pocketpair celebrará el lanzamiento de la actualización<br> Sakurajima
+                            con un
+                            sorteo especial</p>
+                    </div>
+                    <div class="informacion-articulos">
+                        <p class="subtitulo-1"><img class="icono-reloj-hilo" src="imgs/Iconos/reloj-gris-lineas.png"
+                                alt="">
+                            Publicado el 24 de junio</p>
+                        <p class="subtitulo-2b"><img class="icono-review" src="imgs/Iconos/Violeta/like-fill.png"
+                                alt="">151
+                        </p>
+                        <p class="subtitulo-2b"><img class="icono-review" src="imgs/Iconos/Violeta/comentario-fill.png"
+                                alt="">22</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
     <br>
-    <div class="contenedor_2">
-        <div class="forma_parte">
-            <h1 class="Titulo"></b>Formá <br>Parte <br><linea_letra class="linea_letra">en vivo </linea_letra></b></h1>
-            <img src="img/foto paren la mano.png" alt="foto paren la mano">
+    <br>
+
+    <div class="JuegosCarrrusel">
+        <div class="nomenclador" id="nomenJuego">
+            <h2>juegos de la semana</h2>
+        </div>
+        <div class="horizontalCarrusel">
+            <div class="game game-1"> </div>
+            <div class="game game-2"> </div>
+            <div class="game game-3"> </div>
+            <div class="game game-4"> </div>
+            <div class="game game-5"> </div>
+            <div class="game game-6"> </div>
         </div>
     </div>
-    <br>
-    <div class="contenedor_3">
-        <img class="flecha_izq_fondo_violeta" src="img/Flecha Izq.png" alt="">
-        <div class="tarjeta">
-            <h1>Participa en</h1>
-            <img class="img_plm" src="img/fondo_violeta_SLV.jpg" alt="">
-            <img class="img_plm_cel" src="img/fondo_violeta_SLV_celular.jpg" alt="">
-            <h1>#SubanLosVidrios</h1>
-            <p>Un programa menos duro que el <br> cemento y más transparente <br> que el acrílico.</p>
-            <p><b>lunes a viernes <br> 17 a 19 hs</b></p>
+
+    <div class="sectionComunidad">
+        <div class="contenedorNomenclador">
+            <div class="nomenclador">
+                <h1>Listas de la comunidad</h1>
+            </div>
+            <div class="lineas">
+                <div class="linea-1"></div>
+                <div class="linea-2"></div>
+                <div class="linea-3"></div>
+            </div>
         </div>
-        <div class="tarjeta_1">
-            <h1>Participa en</h1>
-            <img src="img/fondo_violeta_PLM.jpg" alt="">
-            <h1>#ParenLaMano</h1>
-            <p>El exitoso streamer y humorista <br> llega a Vorterix con su desopilante y <br> divertido punto de vista.</p>
-            <p><b>lunes a viernes <br> 19 a 21 hs</b></p>
-        </div>
-        <img class="flecha_der_fondo_violeta" src="img/Flecha der.png" alt="">
-    </div>
-    <br>
-    <div class="contenedor_2">
-        <div class="tarjeta_vorterix">
-            <h1>Vorterix</h1>
-            <p>Nos interesa conocerte, entender tu<br> punto de vista sobre nosotros y<br> entregarte la mejor experiencia posible.<br> Unite a nosotros y sé parte<br> de esta experiencia única.</p>
-            <div class="email">
-                <a href="index.html"><button class="btn">Ver más</button></a>
+
+        <div class="listaComunidad">
+            <input class="boton-linea-roja-3" id="botonLista" type="button" value="Crear tu lista">
+            <div class="item item-1">
+                <div class="itemContent">
+                    <h2>Jugar en familia: Experiencias para compartir con tus hijes</h2>
+                    <div class="contenido">
+                        <h4>paupc</h4>
+                        <div class="componentesInformativos">
+                            <div class="like">
+                                <img class="icono-banner" src="imgs/Iconos/Violeta/like-fill.png" alt="">
+                                <p>860</p>
+                            </div>
+                            <div class="comentario">
+                                <img class="icono-banner" src="imgs/Iconos/Violeta/comentario-fill.png" alt="">
+                                <p>240</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="item item-2">
+                <div class="itemContent">
+                    <h2>FPS online para jugar con amigues</h2>
+                    <div class="contenido">
+                        <h4>cata420</h4>
+                        <div class="componentesInformativos">
+                            <div class="like">
+                                <img class="icono-banner" src="imgs/Iconos/Violeta/like-fill.png" alt="">
+                                <p>123</p>
+                            </div>
+                            <div class="comentario">
+                                <img class="icono-banner" src="imgs/Iconos/Violeta/comentario-fill.png" alt="">
+                                <p>230</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item item-3">
+                <div class="itemContent">
+                    <h2>Lanzamientos mejor valorados de Assassin’s Creed</h2>
+                    <div class="contenido">
+                        <h4>juanch ulis</h4>
+                        <div class="componentesInformativos">
+                            <div class="like">
+                                <img class="icono-banner" src="imgs/Iconos/Violeta/like-fill.png" alt="">
+                                <p>156</p>
+                            </div>
+                            <div class="comentario">
+                                <img class="icono-banner" src="imgs/Iconos/Violeta/comentario-fill.png" alt="">
+                                <p>60</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item item-4">
+                <div class="itemContent">
+                    <h2>Los mejores juegos de Nintendo </h2>
+                    <div class="contenido">
+                        <h4>El Doctor</h4>
+                        <div class="componentesInformativos">
+                            <div class="like">
+                                <img class="icono-banner" src="imgs/Iconos/Violeta/like-fill.png" alt="">
+                                <p>423</p>
+                            </div>
+                            <div class="comentario">
+                                <img class="icono-banner" src="imgs/Iconos/Violeta/comentario-fill.png" alt="">
+                                <p>321</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item item-5">
+                <div class="itemContent">
+                    <h2>Nominados GOTY 2023</h2>
+                    <div class="contenido">
+                        <h4>turrobaby</h4>
+                        <div class="componentesInformativos">
+                            <div class="like">
+                                <img class="icono-banner" src="imgs/Iconos/Violeta/like-fill.png" alt="">
+                                <p>57</p>
+                            </div>
+                            <div class="comentario">
+                                <img class="icono-banner" src="imgs/Iconos/Violeta/comentario-fill.png" alt="">
+                                <p>82</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item item-6">
+                <div class="itemContent">
+                    <h2>MOBASS</h2>
+                    <div class="contenido">
+                        <h4>Dante12</h4>
+                        <div class="componentesInformativos">
+                            <div class="like">
+                                <img class="icono-banner" src="imgs/Iconos/Violeta/like-fill.png" alt="">
+                                <p>31</p>
+                            </div>
+                            <div class="comentario">
+                                <img class="icono-banner" src="imgs/Iconos/Violeta/comentario-fill.png" alt="">
+                                <p>15</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item item-7">
+                <div class="itemContent">
+                    <h2>GOATs de Android: Los juegos más descargados de la historiaFPS online para jugar con amigues
+                    </h2>
+                    <div class="contenido">
+                        <h4>Faaka</h4>
+                        <div class="componentesInformativos">
+                            <div class="like">
+                                <img class="icono-banner" src="imgs/Iconos/Violeta/like-fill.png" alt="">
+                                <p>631</p>
+                            </div>
+                            <div class="comentario">
+                                <img class="icono-banner" src="imgs/Iconos/Violeta/comentario-fill.png" alt="">
+                                <p>230</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item item-8">
+                <div class="itemContent">
+                    <h2>Lo más popular de Playstation Store 2023</h2>
+                    <div class="contenido">
+                        <h4>Pep13</h4>
+                        <div class="componentesInformativos">
+                            <div class="like">
+                                <img class="icono-banner" src="imgs/Iconos/Violeta/like-fill.png" alt="">
+                                <p>780</p>
+                            </div>
+                            <div class="comentario">
+                                <img class="icono-banner" src="imgs/Iconos/Violeta/comentario-fill.png" alt="">
+                                <p>42</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item item-9">
+                <div class="itemContent">
+                    <h2>Juegos que no son de carreras pero tienen su modo racing</h2>
+                    <div class="contenido">
+                        <h4>EscupeFu..</h4>
+                        <div class="componentesInformativos">
+                            <div class="like">
+                                <img class="icono-banner" src="imgs/Iconos/Violeta/like-fill.png" alt="">
+                                <p>565</p>
+                            </div>
+                            <div class="comentario">
+                                <img class="icono-banner" src="imgs/Iconos/Violeta/comentario-fill.png" alt="">
+                                <p>420</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item item-10">
+                <div class="itemContent">
+                    <h2>Tier list de expansiones del WoW (Shadowlands = 💩)</h2>
+                    <div class="contenido">
+                        <h4>Nik11</h4>
+                        <div class="componentesInformativos">
+                            <div class="like">
+                                <img class="icono-banner" src="imgs/Iconos/Violeta/like-fill.png" alt="">
+                                <p>567</p>
+                            </div>
+                            <div class="comentario">
+                                <img class="icono-banner" src="imgs/Iconos/Violeta/comentario-fill.png" alt="">
+                                <p>231</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item item-11">
+                <div class="itemContent">
+                    <h2>Los exclusivos de XBOX más comprados</h2>
+                    <div class="contenido">
+                        <h4>TheWarriorPro123</h4>
+                        <div class="componentesInformativos">
+                            <div class="like">
+                                <img class="icono-banner" src="imgs/Iconos/Violeta/like-fill.png" alt="">
+                                <p>570</p>
+                            </div>
+                            <div class="comentario">
+                                <img class="icono-banner" src="imgs/Iconos/Violeta/comentario-fill.png" alt="">
+                                <p>342</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item item-12">
+                <div class="itemContent">
+                    <h2>Todos los GTA: de mejor a peor</h2>
+                    <div class="contenido">
+                        <h4>cata420</h4>
+                        <div class="componentesInformativos">
+                            <div class="like">
+                                <img class="icono-banner" src="imgs/Iconos/Violeta/like-fill.png" alt="">
+                                <p>547</p>
+                            </div>
+                            <div class="comentario">
+                                <img class="icono-banner" src="imgs/Iconos/Violeta/comentario-fill.png" alt="">
+                                <p>98</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="footer">
-        <div>
-            <h3>Nos podes encontrar en</h3>
-        </div>
-        <div>
-            <img src="img/logo_ig.png" alt="">
-            <img src="img/logo_youtube.png" alt="">
-            <img src="img/logo_tiktok.png" alt="">
-            <img src="img/logo_twitch.png" alt="">
-        </div>
-    </div>
-    
-    <script>
-    window.addEventListener('DOMContentLoaded', function() {
-        var emailForm = document.getElementById('emailForm');
 
-        emailForm.addEventListener('submit', function(event) {
-            var input_email = document.getElementById('email');
-            var valor_email = input_email.value.trim();
+    <footer>
+        <div class="redesSociales">
+            <a href="">
+                <img src="./imgs/Iconos/redesSocialesRojo/face.png" alt="">
+            </a>
+            <a href="">
+                <img src="./imgs/Iconos/redesSocialesRojo/ig.png" alt="">
+            </a>
+            <a href="">
+                <img src="./imgs/Iconos/redesSocialesRojo/tiktok.png" alt="">
+            </a>
+            <a href="">
+                <img src="./imgs/Iconos/redesSocialesRojo/youtube.png" alt="">
+            </a>
+            <a href="">
+                <img src="./imgs/Iconos/redesSocialesRojo/twich.png" alt="">
+            </a>
+            <a href="">
+                <img src="./imgs/Iconos/redesSocialesRojo/spotify.png" alt="">
+            </a>
 
-            if (valor_email === "") {
-                event.preventDefault();
-                alert("Por favor, complete su correo electrónico.");
-            } else {
-                localStorage.setItem('email', valor_email);
-            }
-        });
-    });
-</script>
- 
+        </div>
+        <div class="footerLinks">
+            <img src="./imgs/logos/levelUp.png" alt="logoLevelUp" style="max-width: 10%; height: 100%;">
+            <h4>
+                www.levelup.com y el logotipo de LEVELUP son marcas registradas.
+                Derechos Reservados © LEVELUP.COM S de R.L. de C.V.
+            </h4>
+            <div class="links">
+                <a href="">Anunciate</a>
+                <a href="">Contacto</a>
+                <a href="">Reportar</a>
+                <a href="">Terminos</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
