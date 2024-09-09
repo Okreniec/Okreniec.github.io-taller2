@@ -1,754 +1,130 @@
-
 :root {
-    --color_primario: #FF0000;
-    --color_acento: #9D00CD;
+    --color_primario: #F83738;
+    --color_acento: #622F98;
+    --altura_header: 80px;
     --padding_left_right: 2rem;
+    --ancho_máximo: 1440px;
 }
 
-body {
-    font-family: sans-serif;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    padding: 0 10%;
-    margin: 0px;
-    background-color: #242222;
-    color: #FFFFFF;
-}
-
-nav {
-    width: 100%;
-    padding: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #161617;
-    margin: 0px;
-}
-
-.navLinks {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-}
-
-.buscador {
-    height: 40px;
-    padding: 0 24px;
-    background-color: rgba(255, 255, 255, 0.1);
-    text-align: center;
-    border-style: none;
-    border-bottom-style: inset;
-}
-
-.buscador::placeholder {
-    background-image: url(./imgs/Iconos/lupa.png);
-    background-repeat: no-repeat;
-    background-position: 5% center;
-}
-
-.redes {
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-}
-
-.profile {
-    padding-right: 10%;
-}
-
-a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Banner */
-
-/* Banner */
-.banner {
-    background-image: url(Assassins_Creed_Mirage.png);
-    height: 55vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    padding: 20px;
-    margin-top: 120px;
-}
-
-.banner h1 {
-    font-size: 36px;
-    font-weight: 800;
-    color: white;
-}
-
-.banner .subtitulo {
-    font-size: 20px;
-    color: white;
-}
-
-.banner .like,
-.comentario {
-    color: var(--color_acento);
-}
-
-.banner .barra {
-    width: 100%;
-    height: auto;
-}
-
-button {
-    background-color: transparent;
-    height: 24px;
-    width: 20px;
-}
-
-.like,
-.comentario {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 15px;
-}
-
-.icono-banner {
-    width: 20px;
-}
-
-/* I N I C I O   P O P U P*/
-
-.popup-contenedor {
-    background-color: #141414;
-}
-
-.popup{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.popup-izq{
-    margin: 22px;
-    background-color: #242222;
-    width: 60%;
-}
-
-.popup-izq h2{
-    color: rgba(255, 255, 255, 80);
-    margin-left: 10px;
-}
-
-.popup-izq p{
-    color: rgba(227, 227, 227, 80);
-    margin-left: 10px;
-}
-
-.popup-der{
-    color: #FFFFFF;
-    width: 40%;
-}
-
-.popup-abajo {
-    margin: 20px;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.btn-cerrar-modal-1 {
-    border-radius: 2px;
-    padding: 6px 42px;
-    border-color: #FF0000;
-    color: #FFFFFF;
-    background-color: rgba(255, 255, 255, 0);
-}
-
-.btn-cerrar-modal{
-    background-color: #242222;
-    color: #FFFFFF;
-    padding: 6px 42px;
-    border: 0;
-    margin-right: 10px;
-}
-
-#modal {
-    border: 1px solid #9D00CD;
-    width: 60%;
-    overflow: hidden;
-}
-
-#modal::backdrop {
-    background-color: rgb(0, 0, 0, 0.55);
-}
-
-/* F I N   P O P U P*/
-
-/* S E G U N D O   C O N T E N E D O R*/
-
-.segunda {
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-    display: flex;
-}
-
-.JuegosSemana {
-    background-image: url(Content-Warning.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    margin-top: 38px;
-    display: flex;
-    flex-direction: column;
-    background-color: #141414;
-    width: 100%; 
-    padding: 20px;
-}
-
-.Fondo-violeta {
-    align-self: flex-start;
-}
-
-.Fondo-violeta .text img {
-    width: 100%;
-    height: auto;
-}
-
-.juego-hilos {
-    color: #A7A6A6;
-}
-
-.icono-reloj-hilo {
-    width: 14px;
-}
-
-/*----P E R F I L E S   R E S E Ñ A S----*/
-
-.BulletReview {
-    background-image: url(Flechas.png);
-    align-items: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    width: 100%;
-    background-color: #242222;
-}
-
-hr {
-    border: 1px solid rgba(27, 26, 26, 10);
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.icono-review-0 {
-    width: 14px;
-    height: 14px;
-    margin-left: 470px;
-}
-
-.icono-review {
-    width: 14px;
-    height: 14px;
+* {
     margin: 0;
-}
-
-.icono-review-2 {
-    width: 14px;
-    height: 14px;
-    margin-top: 8px;
-    margin-right: 11px;
-}
-
-.boton-linea-roja-2,
-.boton-linea-roja-3 {
-    border-radius: 2px;
-    padding: 6px 42px;
-    border-color: #FF0000;
-    color: #FFFFFF;
-    background-color: rgba(255, 255, 255, 0);
-}
-
-.btn-abrir-modal {
-    border-radius: 2px;
-    padding: 6px 42px;
-    border-color: #FF0000;
-    color: #FFFFFF;
-    background-color: rgba(255, 255, 255, 0);
-    margin-left: 230px;
-}
-
-.text {
-    justify-content: space-between;
-}
-
-.boton-linea-roja-2 {
-    margin-bottom: 11px;
-    margin-left: 72%;
-}
-
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.container-2 {
-    display: flex;
-    align-items: center;
-}
-
-.container-2 p{
-    margin-bottom: 10px;
-}
-
-.color-rojo-txt{
-    color: #FF0000;
-}
-
-.BulletReview p{
-    margin-left: 5px;
-}
-
-.BulletReview h2, .BulletReview .texto-content-warning{
-    margin-left: 30px;
-}
-
-.dur-inm-jug-pun-com-lik {
-    display: flex;
-    align-items: center;
-}
-
-.dur-inm-jug-pun-com-lik a,
-.dur-inm-jug-pun-com-lik button {
-    margin-right: 5px;
-}
-
-.dur-inm-jug-pun-com-lik button {
-    border: 0;
-    width: 125px;
-    padding: 5px 22px;
-    justify-content: space-between;
-    color: white;
-    background-color: rgba(157, 0, 205, 25%);
-}
-
-.dur-inm-jug-pun-com-lik-2 {
-    border: 0;
-    margin-left: 5px;
-    width: 135px;
-    color: white;
-    background-color: rgba(157, 0, 205, 100%);
-}
-
-.stats {
-    display: flex;
-    align-items: center;
-}
-
-.stats p {
-    margin: 20px;
-    display: flex;
-    align-items: center;
-}
-
-.stats img {
-    margin-right: 5px;
-    width: 14px;
-    height: 14px;
-}
-
-.img_criticos {
-    width: 500px;
-}
-
-/*-----F I N   P E R F I L E S   R E S E Ñ A S-----*/
-
-
-/*----- I N I C I O   N O T I C I A S / A R T I C U L O S------*/
-.contenedor-derecha {
-    margin-top: 28px;
-    flex-direction: column;
-    width: 31%;
+    padding: 0;
     box-sizing: border-box;
 }
 
-.Noticias {
-    background-color: #141414;
-    align-items: start;
-    padding: 5px;
-    margin-top: 10px;
+a {
+    outline: none;
+    text-decoration: none;
+    color: white;
+  }
+
+body {
+    background-color: #000015;
+    font-family: sans-serif;
+    color: white;
 }
 
-.Noticias h2 {
-    margin-top: 10px;
-}
-
-.Noticias p  {
-    margin-top: 0px;
-}
-
-.imageNoticia {
-    height: 108px;
-    background-image: url(./imgs/Juegos/articulo00.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
-
-.subtitulo-1 {
+.cont-img {
     display: flex;
-    font-size: 11px;
-    color: rgba(255, 255, 255, 0.50);
-}
-
-.subtitulo-2b {
-    display: flex;
-    font-size: 11px;
-    color: var(--color_acento);
-}
-
-.informacion-articulos {
-    display: flex;
-    gap: 100px;
-}
-
-/*----- F I N   N O T I C I A S / A R T I C U L O S------*/
-
-/* ----- P E R F I L E S D E C R I T I C O S -------*/
-
-.criticos {
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    width: 101%;
-    background-color: #141414;
-    padding: 16px;
-    padding-bottom: 40px;
-    gap: 16px;
-}
-
-.perfiles {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
-    align-items: start;
-    text-align: center;
-}
-
-.perfiles h4 {
-    white-space: nowrap;
-    font-size: 16px;
-}
-
-.perfil-2,
-.botonMas {
-    width: 10%;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-content: center;
+    padding-top: 9%;
+}
+
+.cont-img img {
+    cursor: pointer;
+    width: 30%;
+}
+
+.cont-img01 img {
+    cursor: pointer;
+    width: 87%;
+    padding-left: 13%;
+}
+
+.cont-img02 img {
+    width: 70%;
+    padding-left: 30%;
     align-items: center;
-    text-align: center;
-}
-
-.verMas {
-    background-image: url(./imgs/Profile/verMas.png);
-    background-repeat: no-repeat;
-    border-style: none;
-}
-
-.profileImage,
-.verMas {
-    width: 60px;
-    height: 60px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
-}
-
-.boton-linea-roja-3 {
-    width: 100%;
-    padding: 6px 0;
-    text-align: center;
-}
-/*J U E G O S  D E  L A  S E M A N A */
-
-.JuegosCarrrusel {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
-#nomenJuego {
-    background-color: #9D00CD;
-    position: absolute;
-    width: auto;
-}
-
-.nomenclador h2 {
-    white-space: nowrap;
-    font-size: 20px;
-    padding: 8px 24px;
-    margin: 0;
-}
-
-.horizontalCarrusel {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    height: 250px;
-}
-
-.game {
-    width: calc((100% / 6) - 12px);
-    height: auto;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 45%;
-}
-
-/*F I N  D E  J U E G O S  D E  L A  S E M A N A */
-
-/* L I S T A   D E   C O M U N I D A D*/
-
-.sectionComunidad {
-    position: relative;
-    width: 100%;
-    margin-top: 40px;
-    margin-bottom: 1055px;
-}
-
-.listaComunidad {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: 60px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    grid-gap: 10px;
-    margin-bottom: 150px;
-    width: 100%;
-    height: 750px;
-}
-
-.contenedorNomenclador {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-}
-
-.nomenclador {
-    background-color: rgba(157, 0, 205, 0.7);
-    padding: 12px;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.nomenclador h1 {
-    width: 30%;
-    font-size: 24px;
-    padding: 0 12px;
-    margin: 8px 0;
-}
-
-.lineas {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-content: end;
-    z-index: 100;
-}
-
-.linea-1 {
-    width: 30%;
-    height: 33px;
-    background-color: #242222;
-}
-
-.linea-2 {
-    position: absolute;
-    left: 26.7%;
-    top: -45%;
-    width: 5.8%;
-    height: 30px;
-    transform: rotate(-75deg);
-    background-color: #242222;
-}
-
-.linea-3 {
-    position: absolute;
-    left: 29.1%;
-    top: -100%;
-    width: 75%;
-    height: 34px;
-    background-color: #242222;
-}
-
-
-/* C A R D S*/
-
-.item {
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-content: start;
-    padding: 0px 12px;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.item h2 {
-    font-size: 18px;
-    margin: 0;
-}
-
-.item h4 {
-    width: 35%;
-    font-size: 14px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.componentesInformativos {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    justify-content: space-evenly;
-    align-content: space-between;
-}
-
-.componentesInformativos p {
-    font-size: 12px;
-    color: #9D00CD;
-}
-
-.componentesInformativos img {
-    width: 15px;
-    height: auto;
-}
-
-.componentesInformativos .like,
-.comentario {
-    gap: 20%;
-}
-
-.item .contenido {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    gap: 10%;
-}
-
-#botonLista {
-    height: 40px;
-    grid-column: 1;
-    grid-row: 1;
-    z-index: 1000;
-    margin-top: 16px;
-}
-
-.item-1 {
-    grid-column: 1;
-    grid-row: 2/8;
-}
-
-.item-2 {
-    grid-column: 2;
-    grid-row: 1/5;
-}
-
-.item-3 {
-    grid-column: 3;
-    grid-row: 1/8;
-}
-
-.item-4 {
-    grid-column: 4/6;
-    grid-row: 1/4;
-}
-
-.item-5 {
-    grid-column: 1;
-    grid-row: 8/13;
-}
-
-.item-6 {
-    grid-column: 2;
-    grid-row: 5/10;
-}
-
-.item-7 {
-    grid-column: 3;
-    grid-row: 8/13;
-}
-
-.item-8 {
-    grid-column: 4;
-    grid-row: 4/10;
-}
-
-.item-9 {
-    grid-column: 5;
-    grid-row: 4/8;
-}
-
-.item-10 {
-    grid-column: 2;
-    grid-row: 10/13;
-}
-
-.item-11 {
-    grid-column: 4;
-    grid-row: 10/13;
-}
-
-.item-12 {
-    grid-column: 5;
-    grid-row: 8/13;
-}
-
-/* F I N D E  L I S T A S  D E  C O M U N I D A D*/
-
-/* F O O T E R */
-footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    margin-top: 20px;
-    background-color: #161617;
-}
-
-.redesSociales {
-    margin: 24px 0;
-    display: flex;
-    flex-direction: row;
-    gap: 5%;
     justify-content: center;
 }
 
-.footerLinks {
+
+/** S E G U N D A   P A G I N A**/
+
+
+.cont-globos00 {
+    padding-top: 22%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
     align-items: center;
-    font-size: 14px;
+    justify-content: center;
+    position: flex;
+    height: 300px;
+}
+.globo-izq, .globo-der, .globo-izq2, .globo-der2  {
+    color: black;
+    display: none;
+    position: flex;
+    background: #D9D9D9;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 100%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+ .globo-izq {
+            right: 0;
+            margin-right: 10px;
+        }
+        .globo-der {
+            left: 0;
+            margin-left: 10px;
+        }
+        .globo-izq2 {
+            right: 100%;
+            top: 50%;
+            margin-right: 10px;
+        }
+        .globo-der2 {
+            left: 100%;
+            top: 50%;
+            margin-left: 10px;
+        }
+        .cont-img01 {
+            position: relative;
+        }
+        .cont-img01 img {
+            cursor: pointer;
+            max-width: 100%;
+        }
+        .cont-globos00.state-1 .globo-izq,
+        .cont-globos00.state-1 .globo-der {
+            display: block;
+        }
+        .cont-globos00.state-2 .globo-izq2,
+        .cont-globos00.state-2 .globo-der2 {
+            display: block;
+        }
+
+/** T E R C E R A   P A G I N A**/
+
+.HQ-flex {
+    display: flex;
+    justify-content: center;
 }
 
-.links {
-    text-decoration: underline;
+.c-flex {
+    display: flex;
+    justify-content: center;
 }
 
-/* F I N  F O O T E R */
+/** H A C E   C U A N T O   E X I S T E N  P A G I N A**/
+
+.header {
+    width: 70%;
+    padding-left: 30%;
+}
+
+.info-que-se-yo {
+    margin: 0 auto;
+    text-align: center;
+}
