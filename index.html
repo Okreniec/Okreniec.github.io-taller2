@@ -8,9 +8,48 @@
 </head>
 <body>
     <div class="cont-img">
-        <img id="imgToChange" src="img/presiona-para-comenzar.png" alt="Presiona para comenzar">
+        <p id="startText">Presiona para comenzar</p>
+        <img id="imgToChange" src="img/presiona-para-comenzar.gif" alt="Presiona para comenzar">
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        function cambiarImagen() {
+            var img = document.getElementById('imgToChange');
+            var startText = document.getElementById('startText');
+            let audio;
+
+            if (img.src.endsWith('presiona-para-comenzar.gif')) {
+                img.src = 'img/hola-como-estas.png';
+                startText.style.display = 'none';
+                audio = new Audio('sound/audio00.mpeg');
+            } else if (img.src.endsWith('hola-como-estas.png')) {
+                img.src = 'img/soy-un-asistente-virtual.png';
+                audio = new Audio('sound/audio01.mpeg');
+            } else if (img.src.endsWith('soy-un-asistente-virtual.png')) {
+                img.src = 'img/pero-que-es-un-asistente-virtual.png';
+                audio = new Audio('sound/audio02.mpeg');
+            } else if (img.src.endsWith('pero-que-es-un-asistente-virtual.png')) {
+                img.src = 'img/asistentes-virtuales.png';
+                audio = new Audio('sound/audio03.mpeg');
+            } else if (img.src.endsWith('asistentes-virtuales.png')) {
+                img.src = 'img/algunos-av.png';
+                audio = new Audio('sound/audio04.mpeg');
+            } else if (img.src.endsWith('algunos-av.png')) {
+                img.src = 'img/te-gustaria-saber-mas.png';
+                audio = new Audio('sound/audio05.mpeg');
+            } else if (img.src.endsWith('te-gustaria-saber-mas.png')) {
+                window.location.href = 'popup01.html';
+            }
+
+            if (audio) {
+                audio.play();
+            }
+        } 
+
+        window.onload = function() {
+            var img = document.getElementById('imgToChange');
+            img.onclick = cambiarImagen;
+        };
+    </script>
 </body>
 </html>

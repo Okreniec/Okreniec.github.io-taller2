@@ -5,8 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .donde-se-utilizan, .rango-etario {
+            display: none;
+        }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .background-image {
+            display: block;
+            z-index: 1;
+        }
+
+        .overlay-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            pointer-events: none;
+            display: none;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div>
+        <a href="popup01.html">
+            <img class="header" src="img/asistentes-virtuales-header-1.png" alt="">
+        </a>
+    </div>
+    <div class="donde-se-utilizan">
+        <div class="image-container">
+            <img class="background-image" src="img/donde-los-utilizan.png" alt="" id="donde-utilizan">
+            <img class="overlay-image" src="img/casi-el-40.png" alt="" id="casi-el-40">
+        </div>
+        <div class="image-container">
+            <img class="background-image" src="img/como-lo-utilizan.png" alt="" id="como-utilizan">
+            <img class="overlay-image" src="img/el-uso-mas-comun.png" alt="" id="uso-mas-comun">
+        </div>
+    </div>
+    <div class="rango-etario">
+        <div class="image-container">
+            <img class="background-image" src="img/Estadisticas-Rango-etario.png" alt="" id="estadisticas-rango">
+            <img class="overlay-image" src="img/el-uso-está-bastante.png" alt="" id="uso-estadisticas">
+        </div>
+        <div class="image-container">
+            <img class="background-image" src="img/genero.png" alt="" id="genero">
+            <img class="overlay-image" src="img/el-6.png" alt="" id="el-6">
+        </div>
+    </div>
+    <div class="button-container">
+        <img src="img/como-y-para-que-los-utilizan.png" alt="" id="mostrar-donde">
+        <img src="img/quienes-lo-utilizan.png" alt="" id="mostrar-rango">
+    </div>
+
+    <script>
+        const dondeUtilizanImg = document.getElementById('donde-utilizan');
+        const comoUtilizanImg = document.getElementById('como-utilizan');
+        const estadisticasRangoImg = document.getElementById('estadisticas-rango');
+        const generoImg = document.getElementById('genero');
+
+        const usoMasComunImg = document.getElementById('uso-mas-comun');
+        const casiEl40Img = document.getElementById('casi-el-40');
+        const usoEstadisticasImg = document.getElementById('uso-estadisticas');
+        const el6Img = document.getElementById('el-6');
+
+        // Funciones para mostrar/ocultar imágenes
+        function showOverlay(img) {
+            img.style.display = 'block';
+        }
+
+        function hideOverlay(img) {
+            img.style.display = 'none';
+        }
+
+        // Eventos para la imagen "donde-utilizan"
+        dondeUtilizanImg.addEventListener('mouseenter', () => showOverlay(casiEl40Img));
+        dondeUtilizanImg.addEventListener('mouseleave', () => hideOverlay(casiEl40Img));
+
+        // Eventos para la imagen "como-utilizan"
+        comoUtilizanImg.addEventListener('mouseenter', () => showOverlay(usoMasComunImg));
+        comoUtilizanImg.addEventListener('mouseleave', () => hideOverlay(usoMasComunImg));
+
+        // Eventos para la imagen "Estadisticas-Rango-etario"
+        estadisticasRangoImg.addEventListener('mouseenter', () => showOverlay(usoEstadisticasImg));
+        estadisticasRangoImg.addEventListener('mouseleave', () => hideOverlay(usoEstadisticasImg));
+
+        // Eventos para la imagen "genero"
+        generoImg.addEventListener('mouseenter', () => showOverlay(el6Img));
+        generoImg.addEventListener('mouseleave', () => hideOverlay(el6Img));
+
+        const dondeSeUtilizanDiv = document.querySelector('.donde-se-utilizan');
+        const rangoEtarioDiv = document.querySelector('.rango-etario');
+
+        const mostrarDondeBtn = document.getElementById('mostrar-donde');
+        const mostrarRangoBtn = document.getElementById('mostrar-rango');
+
+        mostrarDondeBtn.addEventListener('click', () => {
+            rangoEtarioDiv.style.display = 'none';
+            dondeSeUtilizanDiv.style.display = 'block';
+        });
+
+        mostrarRangoBtn.addEventListener('click', () => {
+            dondeSeUtilizanDiv.style.display = 'none';
+            rangoEtarioDiv.style.display = 'block';
+        });
+    </script>
 </body>
 </html>

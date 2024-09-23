@@ -25,9 +25,12 @@ body {
 }
 
 .cont-img {
-    display: flex;
     justify-content: center;
     padding-top: 9%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .cont-img img {

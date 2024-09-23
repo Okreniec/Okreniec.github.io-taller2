@@ -5,8 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .image-container {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .image {
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    
+    <div>
+        <a href="popup01.html">
+            <img class="header" src="img/asistentes-virtuales-header-1.png" alt="">
+        </a>
+    </div>
+    <div class="image-container reversed">
+        <img src="img/asistentes-virtuales-mas-popular.png" alt="" id="mostrar-asistentes" class="image">
+        <img src="img/la-mayoria-de-los-usuarios-frecuentan.png" alt="" class="hidden image" id="img-la-mayoria">
+        <img src="img/google-assistant.png" alt="" class="hidden image" id="img-google">
+        <img src="img/alexa.png" alt="" class="hidden image" id="img-alexa">
+        <img src="img/cortana.png" alt="" class="hidden image" id="img-cortana">
+        <img src="img/siri.png" alt="" class="hidden image" id="img-siri">
+    </div>
+    <div class="image-container">
+        <img src="img/se-evidencia-una-tendencia-similar.png" alt="" class="hidden image" id="img-tendencia">
+        <img src="img/crecimiento-en-los-ultimos-años.png" alt="" id="mostrar-crecimiento" class="image">
+    </div>
+
+    <script>
+        const images = [
+            document.getElementById('img-la-mayoria'),
+            document.getElementById('img-google'),
+            document.getElementById('img-alexa'),
+            document.getElementById('img-cortana'),
+            document.getElementById('img-siri')
+        ];
+        
+        let currentIndex = 0;
+
+        function hideAllImages() {
+            images.forEach(img => img.classList.add('hidden'));
+        }
+
+        function showNextImage() {
+            hideAllImages();
+            images[currentIndex].classList.remove('hidden');
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+
+        document.getElementById('mostrar-asistentes').addEventListener('click', () => {
+            currentIndex = 0;
+            showNextImage();
+        });
+
+        images.forEach((img, index) => {
+            img.addEventListener('click', showNextImage);
+        });
+
+        document.getElementById('mostrar-crecimiento').addEventListener('click', () => {
+            hideAllImages();
+            document.getElementById('img-tendencia').classList.remove('hidden');
+        });
+    </script>
 </body>
 </html>
